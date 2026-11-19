@@ -1,0 +1,15 @@
+{
+  "case_id": "example-qa",
+  "paper_id": "P001",
+  "material_version": "v3",
+  "paragraphs": [
+    {"paragraph_id": "1", "text": "The model achieves 28.4 BLEU on WMT 2014 English-to-German."},
+    {"paragraph_id": "2", "text": "Training used 8 P100 GPUs for 12 hours for the base model."},
+    {"paragraph_id": "3", "text": "The Transformer relies solely on attention mechanisms."}
+  ],
+  "questions": [
+    {"question_id": "Q1", "question": "What BLEU score did the model achieve?"},
+    {"question_id": "Q2", "question": "How many GPUs were used for training?"},
+    {"question_id": "Q3", "question": "What is the capital of France?"}
+  ]
+}
