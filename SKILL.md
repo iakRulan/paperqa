@@ -5,6 +5,8 @@ description: "Answer questions about a scientific paper with per-question eviden
 
 # paperqa — Evidence-backed Question Answering over a Paper
 
+> **脚本路径**：本技能安装于 `/skills/weekly-skill/`，脚本绝对路径为 `/skills/weekly-skill/scripts/`（工作目录是 `/app/work`，不要用相对路径）。
+
 Answer each supplied question and let the reader check it: every answer names the paragraph it came from, states the conditions under which it holds, and is marked `insufficient_evidence` when the paper doesn't say. The failure mode this skill exists to prevent: confident answers with no location, questions silently skipped, and "not reported" written as a fact.
 
 **Method in one line:** index the numbered paragraphs → rank them per question by term overlap → compose the answer from the top paragraphs → set `status` honestly → cite paragraph ids and quotes.
@@ -19,7 +21,7 @@ Answer each supplied question and let the reader check it: every answer names th
 ### Phase 1 — Retrieve evidence per question
 
 ```bash
-python3 scripts/answer.py --case /input/case.json --work /app/work
+python3 /skills/weekly-skill/scripts/answer.py --case /input/case.json --work /app/work
 ```
 
 - Normalizes `paragraphs[]` (inline text or objects with `paragraph_id`/`text`) and `questions[]` (`question_id`/`question`).
